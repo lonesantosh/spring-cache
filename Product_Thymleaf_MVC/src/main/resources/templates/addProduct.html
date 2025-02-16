@@ -1,0 +1,33 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<h1 style="color:red; text-align:center;">Add product</h1>
+
+<form th:object="${pp}" method="post">
+	<table border="1" bgcolor="cyan" align="center">
+
+		<tr>
+			<td> Product Name</td>
+			<td><input type="text" th:field="*{pName}" /></td>
+		</tr>
+		<tr>
+			<td>Product Quantity</td>
+			<td><input type="text" th:field="*{pQty}" /></td>
+		</tr>
+
+		<tr>
+			<td> Product Price</td>
+			<td><input type="text" th:field="*{price}" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type="submit" value="Register Product  " />
+			</td>
+		</tr>
+
+	</table>
+</form>
+
+<h1 style="text-align:center;">
+	       <a th:href="@{/product/}">
+	           <img th:src="@{/images/home.png}" width="50" height="50" /> Home
+	       </a>
+	   </h1>
